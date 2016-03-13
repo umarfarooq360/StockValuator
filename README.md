@@ -1,0 +1,3 @@
+# StockValuator
+
+App for stocks
