@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	header.header#top
+		div.text-vertical-center
+			h1  #{title}
+			h3 Welcome to #{title}
+			br			
+			form(name="queryStock", method="post" , action="/getValuation")
+				input(type="search" name="tickerValue")
+				br
+				button(type="submit" class="btn btn-dark btn-lg") Find!
+	if( result != '')
+		each obj, i in result
+			p #{obj.date} #{obj.open}
